@@ -51,14 +51,14 @@ jobs:
           keyPassword: ${{ secrets.KEY_PASSWORD }}
 
       - name: Upload Debug APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jee-tracker-kotlin-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
           retention-days: 7
 
       - name: Upload Release APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: jee-tracker-kotlin-release-apk
           path: ${{ steps.sign_app.outputs.signedReleaseFile }}
